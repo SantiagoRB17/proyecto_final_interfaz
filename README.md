@@ -5,9 +5,9 @@ En este proyecto se realiza la interfaz grafica
 
 # Autores
 
-Veronica Mendoza Arango
-Santiago Ramirez Bernal
-Jorge Andres Ibarra Guzman
+- Veronica Mendoza Arango
+- Santiago Ramirez Bernal
+- Jorge Andres Ibarra Guzman
 
 # Herramientas
 - [javafx 13]
