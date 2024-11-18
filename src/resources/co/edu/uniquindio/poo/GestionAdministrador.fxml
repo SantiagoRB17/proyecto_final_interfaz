@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="741.0" style="-fx-background-color: #0C484B;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="231.0" layoutY="23.0" text="Gestion Administradores" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_nombreAdmin" layoutX="38.0" layoutY="99.0" onAction="#CapturarNombreAdmin" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <TextField id="txt_usuario" fx:id="txt_usuarioAdmin" layoutX="584.0" layoutY="99.0" onAction="#CapturarUsarioAdmin" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Label layoutX="224.0" layoutY="69.0" prefHeight="30.0" prefWidth="86.0" text="Cedula" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_cedulaAdmin" layoutX="224.0" layoutY="99.0" onAction="#CapturarCedulaAdmin" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Label layoutX="38.0" layoutY="137.0" prefHeight="30.0" prefWidth="99.0" text="Contraseña" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_contraseniaAdmin" layoutX="38.0" layoutY="169.0" onAction="#CapturarContraseniaAdmin" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Label layoutX="402.0" layoutY="69.0" prefHeight="30.0" prefWidth="86.0" text="Telefono" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_telefonoAdmin" layoutX="402.0" layoutY="99.0" onAction="#CapturarTelefonoAdmin" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <CheckBox fx:id="check_activoAdmin" layoutX="601.0" layoutY="154.0" mnemonicParsing="false" onAction="#estadoAdmin" text="Activo" textFill="#f4efef">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </CheckBox>
+      <Button id="btn_cliente" fx:id="btn_agregarAdmin" layoutX="41.0" layoutY="208.0" mnemonicParsing="false" onAction="#agregarAdmin" prefHeight="19.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Agregar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_eliminarAdmin" layoutX="394.0" layoutY="204.0" mnemonicParsing="false" onAction="#EliminarAdmin" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Eliminar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_limpiarAdmin" layoutX="527.0" layoutY="205.0" mnemonicParsing="false" onAction="#LimpiarCamposAdmin" prefHeight="17.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Limpiar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="38.0" layoutY="69.0" prefHeight="30.0" prefWidth="86.0" text="Nombre" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="584.0" layoutY="69.0" prefHeight="30.0" prefWidth="86.0" text="Usuario" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="137.0" prefHeight="30.0" prefWidth="162.0" text="Palabra Seguridad" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_PalabraSeguridad" layoutX="224.0" layoutY="169.0" onAction="#CapturarPalabraAdmin" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <ComboBox fx:id="cbx_Sede" layoutX="413.0" layoutY="169.0" onAction="#Sede" prefWidth="150.0" promptText="Sede" />
+      <TableView layoutX="74.0" layoutY="257.0" prefHeight="247.0" prefWidth="591.0" style="-fx-background-color: #37666B;">
+        <columns>
+          <TableColumn fx:id="C1_NombreAdmin" prefWidth="88.79998970031738" text="Nombre" />
+          <TableColumn fx:id="C2_CedulaAdmin" prefWidth="85.59996795654297" text="Cedula" />
+            <TableColumn fx:id="C3_TelefonoAdmin" prefWidth="86.39996337890625" text="Telefono" />
+            <TableColumn fx:id="C4_UusarioAdmin" prefWidth="78.39996337890625" text="Usuario" />
+            <TableColumn fx:id="C5_ContraseniaAdmin" prefWidth="79.20001220703125" text="Contraseña" />
+            <TableColumn fx:id="C6_PalabraAdmin" prefWidth="171.20000000000005" text="Palabra Seguridad" />
+        </columns>
+      </TableView>
+      <Button id="btn_cliente" fx:id="btn_actualizarAdmin" layoutX="167.0" layoutY="208.0" mnemonicParsing="false" onAction="#actualizarAdmin" prefHeight="19.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Actualizar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_volverLoginAdmin" layoutX="24.0" layoutY="526.0" mnemonicParsing="false" onAction="#volverLoginAdmin" prefHeight="19.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Volver al login">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_GestionEmpleadoADMIN" layoutX="565.0" layoutY="526.0" mnemonicParsing="false" onAction="#abrirGestionEmpleADMIN" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #E1A66F;" text="Ir a Gestion Empleado">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_GestionSedeADMIN" layoutX="287.0" layoutY="526.0" mnemonicParsing="false" onAction="#abrirGestionSedeADMIN" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #E1A66F;" text="Ir a Gestion Sedes">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_GestionClienteADMIN" layoutX="565.0" layoutY="578.0" mnemonicParsing="false" onAction="#abrirGestionClienteADMIN" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #E1A66F;" text="Ir a Gestion Clientes">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_GestionVehiculoADMIN" layoutX="287.0" layoutY="578.0" mnemonicParsing="false" onAction="#abrirGestionVehiculoADMIN" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #E1A66F;" text="Ir a Gestion Vehiculos">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

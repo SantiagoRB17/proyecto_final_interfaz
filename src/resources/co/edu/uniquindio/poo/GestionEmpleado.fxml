@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="579.0" style="-fx-background-color: #0C484B;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="194.0" layoutY="22.0" text="Gestion Empleados" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="63.0" prefHeight="30.0" prefWidth="86.0" text="Nombre" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_nombreEmple" layoutX="24.0" layoutY="93.0" onAction="#CapturarNombreEmple" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Label layoutX="24.0" layoutY="133.0" prefHeight="30.0" prefWidth="86.0" text="Usuario" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_usuarioEmple" layoutX="24.0" layoutY="163.0" onAction="#CapturarUsarioEmple" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Label layoutX="210.0" layoutY="63.0" prefHeight="30.0" prefWidth="86.0" text="Cedula" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_cedulaEmple" layoutX="210.0" layoutY="93.0" onAction="#CapturarCedulaEmple" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Label layoutX="210.0" layoutY="133.0" prefHeight="30.0" prefWidth="99.0" text="Contraseña" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_contraseniaEmple" layoutX="210.0" layoutY="165.0" onAction="#CapturarContraseniaEmple" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Label layoutX="388.0" layoutY="63.0" prefHeight="30.0" prefWidth="86.0" text="Telefono" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt_usuario" fx:id="txt_telefonoEmple" layoutX="388.0" layoutY="93.0" onAction="#CapturarTelefonoEmple" style="-fx-background-color: #577A7D;">
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <CheckBox fx:id="check_activoEmple" layoutX="418.0" layoutY="150.0" mnemonicParsing="false" onAction="#estadoEmple" text="Activo" textFill="#f4efef">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </CheckBox>
+      <Button id="btn_cliente" fx:id="btn_actualizarEmple" layoutX="145.0" layoutY="202.0" mnemonicParsing="false" onAction="#actualizarEmpleado" prefHeight="22.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Actualizar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_eliminarEmple" layoutX="309.0" layoutY="202.0" mnemonicParsing="false" onAction="#EliminarEmpleado" prefHeight="11.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Eliminar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_limpiarEmple" layoutX="431.0" layoutY="202.0" mnemonicParsing="false" onAction="#LimpiarCamposEmple" prefHeight="17.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Limpiar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TableView layoutX="16.0" layoutY="265.0" prefHeight="235.0" prefWidth="543.0" style="-fx-background-color: #37666B;">
+        <columns>
+          <TableColumn fx:id="C1_NombreEmple" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="C2_CedulaEmple" prefWidth="75.0" text="Cedula" />
+            <TableColumn fx:id="C3_TelefonoEmple" prefWidth="75.0" text="Telefono" />
+            <TableColumn fx:id="C4_UsuarioEmple" prefWidth="75.0" text="Usuario" />
+            <TableColumn fx:id="C5_ContraseniaEmple" prefWidth="75.0" text="Contraseña" />
+        </columns>
+      </TableView>
+      <Button id="btn_cliente" fx:id="btn_AgregarEmple" layoutX="24.0" layoutY="202.0" mnemonicParsing="false" onAction="#AgregarEmpleado" prefHeight="22.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Agregar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_VolverLoginEMPLE" layoutX="24.0" layoutY="528.0" mnemonicParsing="false" onAction="#VolverLoginEMPLE" prefHeight="11.0" prefWidth="114.0" style="-fx-background-color: #E1A66F;" text="Volver a login">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_GestionCliente" layoutX="202.0" layoutY="527.0" mnemonicParsing="false" onAction="#abrirGestionClientes" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #E1A66F;" text="Ir a gestion de clientes">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="btn_cliente" fx:id="btn_GestionVehiculos" layoutX="393.0" layoutY="527.0" mnemonicParsing="false" onAction="#abrirGestionVehiculos" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: #E1A66F;" text="ir a gestion de Vehiculos">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
